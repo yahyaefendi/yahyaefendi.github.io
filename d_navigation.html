@@ -1,0 +1,25 @@
+<script type="text/javascript">
+	$(document).ready(function(){
+		var d_menu = "";
+		for (var i = 0; i < menu.length; i++) {
+			d_menu += "<label class='home_banner_btn btn' id='page_btn' page='"+menu[i][0]+"'>";
+			d_menu += menu[i][2];
+			d_menu += "</label>";
+		}
+		$('.menu_one').html(d_menu);
+		$('body').on('click','#page_btn',function(){
+			var page 		= $(this).attr('page');
+			var active_page	= $('#active_page').val();
+			if (page != active_page) {
+				$('#loading_page').show();
+				setTimeout(function () {
+					$('#loading_page').fadeOut();
+				}, 1000);
+				$('#'+active_page).hide();
+				$('#active_page').val(page);
+				$('#'+page).show();
+			}
+		});
+	});
+</script>
+<div class="menu_one"></div>

@@ -1,0 +1,71 @@
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('.d_navigation').load('d_navigation.html');
+		var d_portofolio = "";
+		for (var i = 0; i < portofolio.length; i++) {
+			d_portofolio += "<div class='col-6 col-sm-6 col-md-4 col-lg-3 portofolio_modal' key='"+i+"' style='padding: 0px 5px'>";
+			d_portofolio += "<div class='porto_card' key='"+i+"'>";
+			d_portofolio += "<div class='porto_img porto_img_"+i+"' style='background-image:url(uploads/portofolio_img/"+portofolio[i][1]+")'></div>";
+			d_portofolio += "<div class='porto_text porto_text_"+i+"'><p>"+portofolio[i][0]+"<br><br><i class='fa fa-search'>&nbsp;See more</i></p></div>"
+			d_portofolio += "</div>";
+			d_portofolio += "</div>";
+		}
+		$('#portofolio').html(d_portofolio);
+		$('.porto_card').hover(function(){
+			var key = $(this).attr('key');
+				$('.porto_text_'+key).show();
+				$('.porto_img_'+key).addClass('porto_img_hover');
+			},function(){
+				$('.porto_text').hide();
+				$('.porto_img').removeClass('porto_img_hover');
+			}
+		);
+		$('.portofolio_modal').on('click',function(){
+			var key = $(this).attr('key');
+			$("#portofolio_modal").modal();
+			$(".porto_title").html(portofolio[key][0]);
+			$(".porto_desc_img").html("<img src='uploads/portofolio_img/"+portofolio[key][2]+"'>");
+			$(".porto_desc").html(portofolio[key][3]);
+			if (portofolio[key][4] == 0) {
+				$(".porto_link").html("<b>Link Website : </b>"+portofolio[key][5]);
+			}
+			else{
+				$(".porto_link").html("<b>Link Website : </b><a href='"+portofolio[key][5]+"' target='_blank'>"+portofolio[key][5]+"</a>");
+			}
+		});
+	});
+</script>
+<section class="container-fluid" id="my_portofolio" style="display: none;position: fixed;">
+	<div class="row">
+		<div class="col-sm-8 col-md-7 offset-sm-3 offset-md-4">
+			<span class="d_navigation"></span>
+			<h5><b>My Portofolio</b></h5>
+		</div>
+		<div class="col-sm-8 col-md-7 offset-sm-3 offset-md-4 landing_page">
+			<div class="row" id="portofolio" style="margin: 20px 0px 0px 0px;">
+			</div>
+		</div>
+	</div>
+</section>
+<!-- The Modal -->
+<div class="modal fade" id="portofolio_modal">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<!-- Modal Header -->
+			<div class="modal-header">
+				<h5 class="modal-title porto_title"></h5>
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+			</div>
+			<!-- Modal body -->
+			<div class="modal-body">
+				<div class="porto_desc_img"></div>
+				<hr>
+				<i>Deskripsi :</i>
+				<div class="porto_desc"></div>
+				<br>
+				<div class="porto_link"></div>
+				<hr>
+			</div>
+		</div>
+	</div>
+</div>

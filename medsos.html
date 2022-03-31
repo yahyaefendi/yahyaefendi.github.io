@@ -1,0 +1,12 @@
+<script type="text/javascript">
+	$(document).ready(function(){
+		var l_medsos = "";
+		for (var i = 0; i < medsos.length; i++) {
+			l_medsos += "<a href="+medsos[i][0]+" style='text-decoration: none;margin-right: 10px;' target='_blank'>";
+			l_medsos += "<img src='"+medsos[i][1]+"' width='30'>";
+			l_medsos += "</a>";
+		}
+		$('.medsos').html(l_medsos);
+	});
+</script>
+<div style="margin-top: 5px" class="medsos"></div>

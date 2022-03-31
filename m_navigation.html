@@ -1,0 +1,48 @@
+<script type="text/javascript">
+	$(document).ready(function(){
+		var m_menu = "";
+		for (var i = 0; i < menu.length; i++) {
+			m_menu += "<div class='col-4' style='text-align: center;'>";
+			m_menu += "<label id='m_page_btn' page='"+menu[i][0]+"'>";
+			m_menu += "<i class='"+menu[i][1]+"'></i><br>";
+			m_menu += menu[i][2];
+			m_menu += "</label>";
+			m_menu += "</div>";
+		}
+		$('#m_menu_navigation').html(m_menu);
+		$('.btn_menu').on('click',function(){
+			$('#m_menu').fadeToggle(200);
+		});
+		$('body').on('click','#m_page_btn',function(){
+			var page 		= $(this).attr('page');
+			var active_page	= $('#active_page').val();
+			if (page != active_page) {
+				$('#loading_page').show();
+				setTimeout(function () {
+					$('#loading_page').fadeOut();
+				}, 1000);
+				$('#m_menu').fadeToggle(200);
+				$('#'+page).show();
+				$('#'+active_page).hide();
+				$('#active_page').val(page);	
+			}
+			else{
+				$('#m_menu').fadeToggle(200);
+			}
+		});
+	});
+</script>
+<section class="container-fluid fixed-bottom">
+	<div class="row">
+		<div class="col-12 m_menu" id="m_menu">
+			<div class="m_menu_inner">
+				<div class="row" id="m_menu_navigation"></div>
+			</div>
+		</div>
+		<div class="col-12">
+			<div class="btn_menu">
+				<i class="fas fa-th"></i>
+			</div>		
+		</div>
+	</div>
+</section>

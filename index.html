@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>PortoWeb - Rian Tri Kusuma</title>
+		<link rel="icon" href="uploads/me/header_foto.jpg">
+
+	    <!-- Required meta tags -->
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	    <meta name="keywords" content="Rian Tri Kusuma, Portofolio Website, Full Stack Web Developer">
+	    <meta name="copyright" content="Portofolio Website - Rian Tri Kusuma">
+	    <meta name="description" content="Portofolio Website - Rian Tri Kusuma">
+
+	    <!-- Bootstrap CSS -->
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	    <!-- Font Awesome -->
+	    <script src="https://kit.fontawesome.com/baf577aa40.js" crossorigin="anonymous"></script>
+	    <!-- custom css -->
+	    <link rel="stylesheet" href="theme/css/style.css">
+
+	    <!-- Optional JavaScript -->
+	    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+	    <script src="theme/js/menu.js"></script>
+	    <script src="theme/js/medsos.js"></script>
+	    <script src="theme/js/portofolio.js"></script>
+	    <script type="text/javascript">
+	    	$(document).ready(function(){
+	    		$('#m_navigation').load('m_navigation.html');
+	    		var page = "";
+	    		for (var i = 0; i < menu.length; i++) {
+	    			page += '<div id="'+menu[i][0]+'_page"></div>'
+				}
+				$('#page').html(page);
+	    		$('#home_page').load('page/home.html');
+	    		$('#about_me_page').load('page/about_me.html');
+	    		$('#my_education_page').load('page/my_education.html');
+	    		$('#my_job_experience_page').load('page/my_job_experience.html');
+	    		$('#my_portofolio_page').load('page/my_portofolio.html');
+	    		$('#contact_me_page').load('page/contact_me.html');
+	    	});
+	    </script>
+	</head>
+	<body class="body_bg" style="background-image: url(uploads/me/banner1.png)">
+		<div id="loading_page" style="position: absolute;width: 100%;height: 100%;z-index: 1031;text-align: center;background: #e5eff1;display: none;">
+			<img src="theme/img/loading.gif" style="width: 250px;position: relative;top: 200px;">
+		</div>
+
+		<!-- header -->
+		<section class="container-fluid sticky-top">
+			<div class="row" style="padding: 10px 0px;">
+				<div class="col-12 header_panel">
+					<div class="header_image" style="background-image: url('uploads/me/header_foto.jpg')"></div>
+					&nbsp;
+					<div class="header_name" style="">
+						<p>
+							Rian <br>
+							Tri Kusuma <br>
+						</p>
+						<span>Full Stack Web Developer</span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- header -->
+
+		<div id="page"></div>
+		
+		<!-- m navitgation -->
+		<span id="m_navigation"></span>
+		<!-- active page -->
+		<input type="hidden" id="active_page" value="home">
+	</body>
+</html>
