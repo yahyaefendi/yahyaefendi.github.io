@@ -57,18 +57,18 @@ body {
 	}
 }
 .home_banner_btn{
-	color: #1777f2;
-	margin: 5px;
+	color: #65696c;
+	margin: 3px;
     padding: 10px;
     transition: color 0.4s;
     transition: background 0.4s;
     box-shadow: 1px 1px 10px 0px #e6e6e6;
-    border-radius: 15px 0px;
+    border-radius: 10px 10px;
     text-decoration: none;
 }
 .home_banner_btn:hover{
 	color: white;
-	background: #1777f2;
+	background: #65696c;
 	box-shadow: 1px 1px 10px 3px #c8c8c8;
 	text-decoration: none;
 }
