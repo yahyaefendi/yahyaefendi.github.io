@@ -195,7 +195,7 @@ li:before {
     transition: all 0.3s ease-in-out;
 }
 li:hover:before {
-	background-color: #95c4ff;
+	background-color: #98a0a8;
 }
 li:after {
     position: absolute;
