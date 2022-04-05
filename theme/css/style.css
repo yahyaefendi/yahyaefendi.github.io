@@ -96,7 +96,8 @@ body {
 	right: 18px;
 }
 .btn_menu:active {
-  background: #1777f2;
+	color : #65696c;
+  background: white;
   box-shadow: 0px 0px 10px 5px #cacaca;
 }
 @media screen and (max-width: 992px) {
