@@ -13,7 +13,7 @@ body {
 @media screen and (max-width: 992px) {
 	.body_bg{
 		height:100vh;
-		background-position-x: -250px;
+		background-position-x: -400px;
 	}
 }
 .header_panel{
