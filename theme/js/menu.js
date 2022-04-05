@@ -12,17 +12,17 @@ var menu = [
 	[
 		'my_education',
 		'fas fa-graduation-cap',
-		'My Education'
+		'Education'
 	],
 	[
 		'my_job_experience',
 		'fas fa-briefcase',
-		'My Job Experience'
+		'Job Experience'
 	],
 	[
 		'my_portofolio',
 		'fab fa-squarespace',
-		'My Portofolio'
+		'Portofolio'
 	],
 	[
 		'contact_me',
