@@ -208,7 +208,7 @@ li:after {
     z-index: 0;
 }
 li:hover:after {
-	background-color: #2ecc71;
+	background-color: #2e6bcc;
 }
 li li {
 	font-size: 0.8em;
